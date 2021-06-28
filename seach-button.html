@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search-Button</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- Html Intro -->
+    <input type="text" id="mysearch" onkeyup="myFunction()" placeholder="Search.." 		title="Type in a category">
+    <ul id="myhead">
+        <li><a href="">cartoon</a></li>
+        <li><a href="">Movies</a></li>
+        <li><a href="">Fairtales</a></li>
+        <li><a href="">Serial</a></li>
+        <li><a href="">anime</a></li>
+        <li><a href="">cricket</a></li>
+        <li><a href="">basketball</a></li>
+        <li><a href="">football</a></li>
+        <li><a href="">hockey</a></li>
+        <li><a href="">tennis</a></li>
+        <li><a href="">market</a></li>
+        <li><a href="">shopping</a></li>
+        <li><a href="">toys</a></li>
+        <li><a href="">basket</a></li>
+        <li><a href="">ball</a></li>
+        <li><a href="">carret</a></li>
+        <li><a href="">comrade</a></li>
+        <li><a href="">hii</a></li>
+        <li><a href="">hello</a></li>
+        <li><a href="">world</a></li>
+    </ul>
+    <!-- Javascript Intro -->
+    <script>
+    function myFunction(){
+        var ul, li,filter,input,a;
+        input=document.getElementById("mysearch");
+        filter=input.value.toUpperCase();
+        ul=document.getElementById('myhead');
+        li=ul.getElementsByTagName('li');
+        for(var i=0;i<li.length;i++){
+            a=li[i].getElementsByTagName('a')[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1)
+            {
+            li[i].style.display = "";
+            } 
+            else 
+            {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
